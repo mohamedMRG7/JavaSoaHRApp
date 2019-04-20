@@ -1,0 +1,75 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xsd:schema xmlns:ns0="http://dao.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dao.com/">
+    <xsd:complexType name="deleteDepartment">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="deleteDepartmentResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getAllDepartments"/>
+    <xsd:complexType name="getAllDepartmentsResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:department" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getDepartmentByID">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getDepartmentByIDResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:department" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="insertDepartment">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+            <xsd:element name="arg1" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="arg2" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="arg3" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="insertDepartmentResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="updateDepartment">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+            <xsd:element name="arg1" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="arg2" type="xsd:int"/>
+            <xsd:element name="arg3" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="updateDepartmentResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="department">
+        <xsd:sequence>
+            <xsd:element name="departmentID" type="xsd:int"/>
+            <xsd:element name="depratmentName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="locationID" type="xsd:int"/>
+            <xsd:element name="managerID" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="dbUtil"/>
+    <xsd:element name="deleteDepartment" type="ns0:deleteDepartment"/>
+    <xsd:element name="deleteDepartmentResponse" type="ns0:deleteDepartmentResponse"/>
+    <xsd:element name="getAllDepartments" type="ns0:getAllDepartments"/>
+    <xsd:element name="getAllDepartmentsResponse" type="ns0:getAllDepartmentsResponse"/>
+    <xsd:element name="getDepartmentByID" type="ns0:getDepartmentByID"/>
+    <xsd:element name="getDepartmentByIDResponse" type="ns0:getDepartmentByIDResponse"/>
+    <xsd:element name="insertDepartment" type="ns0:insertDepartment"/>
+    <xsd:element name="insertDepartmentResponse" type="ns0:insertDepartmentResponse"/>
+    <xsd:element name="updateDepartment" type="ns0:updateDepartment"/>
+    <xsd:element name="updateDepartmentResponse" type="ns0:updateDepartmentResponse"/>
+</xsd:schema>
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.11-b150616.1732 svn-revision#a247ba216861f2c0baac9a3657c5690bce0c744d. -->

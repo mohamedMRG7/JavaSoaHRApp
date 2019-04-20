@@ -1,0 +1,90 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xsd:schema xmlns:ns0="http://dao.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dao.com/">
+    <xsd:complexType name="addEmployee">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="ns0:employee" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="deleteEmployee">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getAllEmployees"/>
+    <xsd:complexType name="getAllEmployeesByHireDate"/>
+    <xsd:complexType name="getAllEmployeesByHireDateResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:employee" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getAllEmployeesResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:employee" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getEmployeeById">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getEmployeeByIdResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:employee" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getEmployeesBySalary">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getEmployeesBySalaryResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:employee" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getEmployeesInSpecificDepartment">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="getEmployeesInSpecificDepartmentResponse">
+        <xsd:sequence>
+            <xsd:element name="return" type="ns0:employee" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="updateEmplyee">
+        <xsd:sequence>
+            <xsd:element name="arg0" type="ns0:employee" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="employee">
+        <xsd:sequence>
+            <xsd:element name="commission_pct" type="xsd:double" minOccurs="0"/>
+            <xsd:element name="department_id" type="xsd:int"/>
+            <xsd:element name="email" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="employee_id" type="xsd:int"/>
+            <xsd:element name="first_name" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="hire_date" type="xsd:dateTime" minOccurs="0"/>
+            <xsd:element name="jop_id" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="last_name" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="manager_id" type="xsd:int"/>
+            <xsd:element name="phone_number" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="salary" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="dbUtil"/>
+    <xsd:element name="addEmployee" type="ns0:addEmployee"/>
+    <xsd:element name="deleteEmployee" type="ns0:deleteEmployee"/>
+    <xsd:element name="getAllEmployees" type="ns0:getAllEmployees"/>
+    <xsd:element name="getAllEmployeesByHireDate" type="ns0:getAllEmployeesByHireDate"/>
+    <xsd:element name="getAllEmployeesByHireDateResponse" type="ns0:getAllEmployeesByHireDateResponse"/>
+    <xsd:element name="getAllEmployeesResponse" type="ns0:getAllEmployeesResponse"/>
+    <xsd:element name="getEmployeeById" type="ns0:getEmployeeById"/>
+    <xsd:element name="getEmployeeByIdResponse" type="ns0:getEmployeeByIdResponse"/>
+    <xsd:element name="getEmployeesBySalary" type="ns0:getEmployeesBySalary"/>
+    <xsd:element name="getEmployeesBySalaryResponse" type="ns0:getEmployeesBySalaryResponse"/>
+    <xsd:element name="getEmployeesInSpecificDepartment" type="ns0:getEmployeesInSpecificDepartment"/>
+    <xsd:element name="getEmployeesInSpecificDepartmentResponse" type="ns0:getEmployeesInSpecificDepartmentResponse"/>
+    <xsd:element name="updateEmplyee" type="ns0:updateEmplyee"/>
+</xsd:schema>
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.11-b150616.1732 svn-revision#a247ba216861f2c0baac9a3657c5690bce0c744d. -->

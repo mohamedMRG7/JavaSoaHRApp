@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="Dep_Service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="226" width="137" height="132">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="219" width="156" height="146">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="Dep_Service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://dao.com/#wsdl.interface(DepDao)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>getAllDepartments</dgm:item>
+            <dgm:item>getDepartmentByID</dgm:item>
+            <dgm:item>insertDepartment</dgm:item>
+            <dgm:item>deleteDepartment</dgm:item>
+            <dgm:item>updateDepartment</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="Emp_Service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="26" width="137" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="19" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="Emp_Service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://dao.com/#wsdl.interface(EmpDao)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>getAllEmployeesByHireDate</dgm:item>
+            <dgm:item>getEmployeesBySalary</dgm:item>
+            <dgm:item>getEmployeesInSpecificDepartment</dgm:item>
+            <dgm:item>getEmployeeById</dgm:item>
+            <dgm:item>updateEmplyee</dgm:item>
+            <dgm:item>addEmployee</dgm:item>
+            <dgm:item>getAllEmployees</dgm:item>
+            <dgm:item>deleteEmployee</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gReference name="Dep_Reference">
+        <dgm:body borderWidth="2" arcRad="20" X="646" Y="226" width="136" height="132">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="636" Y="219" width="156" height="146">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="Dep_Reference" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://dao.com/#wsdl.interface(DepDao)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>getAllDepartments</dgm:item>
+            <dgm:item>getDepartmentByID</dgm:item>
+            <dgm:item>insertDepartment</dgm:item>
+            <dgm:item>deleteDepartment</dgm:item>
+            <dgm:item>updateDepartment</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
+    <dgm:gReference name="Emp_Reference">
+        <dgm:body borderWidth="2" arcRad="20" X="646" Y="26" width="136" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="636" Y="19" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="Emp_Reference" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://dao.com/#wsdl.interface(EmpDao)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>getAllEmployeesByHireDate</dgm:item>
+            <dgm:item>getEmployeesBySalary</dgm:item>
+            <dgm:item>getEmployeesInSpecificDepartment</dgm:item>
+            <dgm:item>getEmployeeById</dgm:item>
+            <dgm:item>updateEmplyee</dgm:item>
+            <dgm:item>addEmployee</dgm:item>
+            <dgm:item>getAllEmployees</dgm:item>
+            <dgm:item>deleteEmployee</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
+    <dgm:gWireLink source="Dep_Service" target="Dep_Reference" width="2">
+        <dgm:gSegment X1="168" Y1="236" X2="636" Y2="236"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="Emp_Service" target="Emp_Reference" width="2">
+        <dgm:gSegment X1="168" Y1="36" X2="636" Y2="36"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>
